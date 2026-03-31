@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loopbot — Agentes LLM operativos</title>
+    <title>Loopbot — Tu próximo empleado ya existe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #faf9f7;
@@ -26,7 +29,7 @@
         }
 
         body {
-            font-family: 'Times New Roman', 'Georgia', 'Garamond', serif;
+            font-family: 'Libre Baskerville', 'Georgia', serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.7;
@@ -191,54 +194,6 @@
             margin-bottom: 0;
         }
 
-        /* Produces list */
-        .produces-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .produce-item {
-            padding: 1.5rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 3px;
-        }
-
-        .produce-item strong {
-            display: block;
-            margin-bottom: 0.4rem;
-            color: var(--text);
-        }
-
-        .produce-item p {
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-
-        /* Architecture */
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-            margin-top: 2rem;
-        }
-
-        .col h3 {
-            margin-top: 0;
-            font-size: 1.3rem;
-        }
-
-        .col .label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
-            font-weight: 700;
-            margin-bottom: 0.3rem;
-        }
-
         /* Timeline */
         .timeline {
             margin-top: 2rem;
@@ -278,36 +233,26 @@
             font-size: 1.15rem;
         }
 
-        /* Modes */
-        .modes {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 2rem;
+        /* Channels */
+        .channels {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
         }
 
-        .mode {
-            text-align: center;
-            padding: 2rem 1.5rem;
+        .channel {
+            padding: 0.6rem 1.2rem;
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 3px;
+            font-size: 0.95rem;
+            color: var(--text);
         }
 
-        .mode .icon {
-            font-size: 1.8rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .mode h3 {
-            margin-top: 0;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .mode p {
-            font-size: 0.9rem;
-            margin-bottom: 0;
+        .channel.soon {
+            color: var(--text-secondary);
+            border-style: dashed;
         }
 
         /* Feedback */
@@ -361,12 +306,6 @@
 
         /* Responsive */
         @media (max-width: 700px) {
-            .produces-grid,
-            .two-col,
-            .modes {
-                grid-template-columns: 1fr;
-            }
-
             nav .nav-links {
                 gap: 1rem;
                 font-size: 0.85rem;
@@ -383,173 +322,130 @@
 <nav>
     <a href="#" class="logo">loopbot</a>
     <ul class="nav-links">
-        <li><a href="#principios">Principios</a></li>
-        <li><a href="#produce">Resultado</a></li>
-        <li><a href="#como">Arquitectura</a></li>
+        <li><a href="#que-es">Qué es</a></li>
+        <li><a href="#casos">Casos</a></li>
+        <li><a href="#como">Cómo funciona</a></li>
+        <li><a href="#canales">Canales</a></li>
         <li><a href="https://github.com/loopbot-workforce/loopbot" target="_blank">GitHub</a></li>
     </ul>
 </nav>
 
 <div class="hero">
-    <h1>Un framework para construir <em>agentes que aprenden</em></h1>
-    <p>El agente arranca vacío y aprende el negocio del humano a través de la interacción. Con el tiempo, gana autonomía y produce valor real.</p>
-    <a href="#principios" class="cta">Explorar</a>
+    <h1>Tu próximo empleado <br><em>ya existe</em></h1>
+    <p>Agentes que aprenden tu negocio, ganan autonomía con cada interacción, y operan por vos las 24 horas. Sin programar. Sin configurar. Solo hablándoles.</p>
+    <a href="#contacto" class="cta">Quiero mi agente</a>
 </div>
 
 <hr class="divider">
 
 <section id="que-es">
-    <h2>Qué es Loopbot</h2>
-    <p class="lead">No es un producto para un dominio específico. Es el proceso por el cual se construye un agente operativo para cualquier dominio.</p>
-    <p>Loopbot es un framework para construir agentes LLM operativos. El agente arranca vacío — como un empleado nuevo — y aprende el negocio del humano a través de la interacción. Con el tiempo, gana autonomía y produce valor real.</p>
+    <h2>El empleado que nunca duerme</h2>
+    <p class="lead">Un agente que entra a tu negocio como un empleado nuevo. No sabe nada el día uno. Pero aprende rápido, no se olvida, y no se va.</p>
+    <p>Loopbot crea agentes operativos para tu negocio. Le contás qué hacés, quiénes son tus clientes, qué reglas seguís — y el agente empieza a trabajar. Responde consultas, hace seguimiento, coordina tareas, detecta lo que se está cayendo. Cada corrección que le hacés lo vuelve mejor. Cada día que pasa necesita menos supervisión.</p>
+    <p>No es un chatbot. No es un asistente. Es un operador que trabaja en tu negocio como si fuera parte del equipo.</p>
+    <p style="color: var(--accent); font-style: italic;">Mientras vos dormís, tu agente está respondiendo clientes.</p>
 </section>
 
 <hr class="divider">
 
-<section id="principios">
-    <h2>5 principios fundamentales</h2>
+<section id="casos">
+    <h2>Probado en el Dojo</h2>
+    <p>Antes de tocar un cliente real, cada agente pasa por el Dojo: un simulador que inyecta conversaciones reales, mide la calidad de las respuestas, y evalua si el agente esta listo para operar. No es un test unitario — es una prueba de negocio completa.</p>
     <div class="principles">
         <div class="principle">
-            <div class="number">01</div>
-            <h3>El agente arranca vacío y aprende con la interacción</h3>
-            <p>No hay configuración previa del dominio. El agente no sabe nada del negocio el día uno. Aprende haciendo preguntas, recibiendo correcciones, y observando patrones. El conocimiento se acumula como skills, reglas, y nodos en un grafo de objetivos. El patrón central es: detectar que no sé, registrar la respuesta, aplicar la próxima vez sin preguntar.</p>
+            <div class="number">INMOBILIARIA &mdash; 87/100 SENIOR</div>
+            <h3>Respuesta en menos de 2 minutos. Todos los dias. A cualquier hora.</h3>
+            <p>Atiende leads por WhatsApp, califica al cliente, busca propiedades que encajan, coordina visitas con el equipo, y hace follow-up de los que se enfriaron. Maneja 3 clientes simultaneos sin mezclar informacion. Escala al humano cuando no sabe. Los leads que antes se perdian un viernes a las 23h ahora tienen respuesta inmediata.</p>
         </div>
         <div class="principle">
-            <div class="number">02</div>
-            <h3>Autonomía creciente por skill, no global</h3>
-            <p>La confianza se gana por capacidad específica, no como un switch general. El agente puede ser autónomo para confirmar visitas pero necesitar consulta para contraofertas. Cada skill tiene su propio nivel de autonomía que sube con aprobaciones y baja con correcciones. La autonomía no es un número que sube — es una consecuencia de que el skill tiene suficiente información para que el humano confíe en dejarlo actuar solo.</p>
+            <div class="number">SEGUROS &mdash; 78/100 SENIOR</div>
+            <h3>300 polizas en cartera. Cero renovaciones olvidadas.</h3>
+            <p>Cotiza en multiples aseguradoras, asesora al cliente sobre la mejor opcion, y gestiona la emision. Detecta renovaciones proximas, re-cotiza automaticamente, y contacta al cliente antes de que se le venza la poliza. Ningun humano puede hacer eso con 300 clientes sin que se le escape alguno.</p>
         </div>
         <div class="principle">
-            <div class="number">03</div>
-            <h3>Configuración sobre código</h3>
-            <p>El comportamiento se define con prompts, archivos de configuración, y reglas — no reescribiendo lógica. Cambiar cómo opera el agente es editar un archivo, no modificar TypeScript. La complejidad se mueve de código a configuración.</p>
-        </div>
-        <div class="principle">
-            <div class="number">04</div>
-            <h3>Loop universal, skills como diferenciador</h3>
-            <p>El ciclo despertar, evaluar, actuar, persistir, dormir es siempre el mismo. Lo que cambia entre una inmobiliaria y una aseguradora son los skills, las entidades, y los criterios de priorización. El loop es la infraestructura; los skills son el negocio.</p>
-        </div>
-        <div class="principle">
-            <div class="number">05</div>
-            <h3>Proactividad vía detección de gaps</h3>
-            <p>El agente no inventa trabajo. La proactividad nace del gap entre el estado actual y los objetivos estratégicos durante el heartbeat periódico. Si todo va según plan, el heartbeat es silencioso. Si hay un gap — un cliente sin respuesta hace 48 horas, una renovación próxima sin cotizar — el agente propone acciones para cerrarlo.</p>
+            <div class="number">TU NEGOCIO</div>
+            <h3>Si podes explicar como funciona, ya tenes un agente</h3>
+            <p>Respondes consultas, haces seguimiento, coordinas agendas, gestionas procesos repetitivos. Todo eso lo puede hacer un agente Loopbot. El rubro no importa. Si un empleado nuevo podria aprenderlo, tu agente tambien.</p>
         </div>
     </div>
-</section>
-
-<hr class="divider">
-
-<section id="produce">
-    <h2>Qué produce</h2>
-    <p>El resultado exitoso es un agente configurado y operativo para un negocio específico.</p>
-    <div class="produces-grid">
-        <div class="produce-item">
-            <strong>Identidad</strong>
-            <p>Quién es el agente, qué negocio opera, y qué reglas sigue.</p>
-        </div>
-        <div class="produce-item">
-            <strong>Capacidades</strong>
-            <p>Skills de negocio que saben ejecutar tareas del dominio: coordinar visitas, cotizar seguros, hacer follow-ups.</p>
-        </div>
-        <div class="produce-item">
-            <strong>Consciencia situacional</strong>
-            <p>Un grafo de objetivos poblado — estratégicos, tácticos, operativos — que le dice al agente dónde están las cosas y qué falta hacer.</p>
-        </div>
-        <div class="produce-item">
-            <strong>Guardrails</strong>
-            <p>Reglas determinísticas que limitan lo que el agente puede hacer sin consultar al humano.</p>
-        </div>
-        <div class="produce-item">
-            <strong>Autonomía calibrada</strong>
-            <p>Cada skill con el nivel de autonomía que el humano aprobó a través del uso.</p>
-        </div>
-    </div>
+    <p style="margin-top: 2rem; text-align: center;"><a href="#contacto" class="cta">Quiero probarlo en mi negocio</a></p>
 </section>
 
 <hr class="divider">
 
 <section id="como">
     <h2>Cómo funciona</h2>
+    <p class="lead">No necesitás programar nada. Le hablás, te pregunta, aprende, y empieza a operar.</p>
 
-    <div class="two-col">
-        <div class="col">
-            <div class="label">Meta-agente</div>
-            <h3>El Regent</h3>
-            <p>No opera el negocio — construye al agente que lo opera. Sabe hacer onboarding, crear skills, estructurar el grafo, incorporar feedback, y detectar qué le falta al agente. Es como un sistema operativo que sabe instalar aplicaciones.</p>
-        </div>
-        <div class="col">
-            <div class="label">Operador</div>
-            <h3>El Agente</h3>
-            <p>Recibe mensajes, consulta el grafo, ejecuta skills, y responde. Es el empleado que atiende clientes, hace follow-ups, y escala al humano cuando no sabe.</p>
-        </div>
-    </div>
-
-    <h3 style="margin-top: 3.5rem;">Ciclo de vida</h3>
     <div class="timeline">
         <div class="timeline-item">
-            <h3>Día 1</h3>
-            <p>El regent hace la primera conversación. Pregunta qué hace el negocio, quiénes son los actores, qué problemas quiere resolver el humano. Todo es onboarding.</p>
+            <h3>Le contás tu negocio</h3>
+            <p>Una conversación. Qué hacés, quiénes son tus clientes, qué problemas querés resolver. El agente toma nota de todo.</p>
         </div>
         <div class="timeline-item">
-            <h3>Primeras semanas</h3>
-            <p>El regent identifica entidades, procesos, y patrones. Escribe la configuración del agente, crea los primeros skills, configura canales. 70% onboarding, 30% operación incipiente.</p>
+            <h3>Empieza a trabajar con supervisión</h3>
+            <p>Las primeras semanas te consulta antes de actuar. Cada vez que aprobás una acción, aprende que puede hacerla solo la próxima vez. Cada vez que lo corregís, ajusta el criterio.</p>
         </div>
         <div class="timeline-item">
-            <h3>Operación</h3>
-            <p>El onboarding se completa gradualmente — no hay switch. El regent pasa a modo calibración: incorpora feedback, escala autonomía de skills que funcionan bien, detecta gaps, propone skills nuevos. El agente opera el negocio.</p>
+            <h3>Gana autonomía y opera solo</h3>
+            <p>No hay un momento donde "lo soltás". La autonomía crece gradualmente, tarea por tarea. Puede manejar solo las confirmaciones de visitas pero consultarte para contraofertas. Vos controlás hasta dónde llega.</p>
         </div>
     </div>
+    <p style="margin-top: 2rem; color: var(--text-secondary);">Responde mensajes de clientes, vigila que nada se caiga, y agenda acciones futuras. Todo al mismo tiempo, sin que le tengas que decir cuando.</p>
+</section>
 
-    <h3 style="margin-top: 3.5rem;">Tres modos de operación</h3>
-    <div class="modes">
-        <div class="mode">
-            <div class="icon">&larr;</div>
-            <h3>Reactivo</h3>
-            <p>Un mensaje llega. El agente evalúa, ejecuta el skill correspondiente, responde.</p>
-        </div>
-        <div class="mode">
-            <div class="icon">&circlearrowright;</div>
-            <h3>Heartbeat</h3>
-            <p>Cada N minutos, el agente se despierta, consulta el grafo, detecta gaps, actúa o calla.</p>
-        </div>
-        <div class="mode">
-            <div class="icon">&clock;</div>
-            <h3>Tarea programada</h3>
-            <p>El agente programa una acción futura con contexto. Un scheduler la dispara a la hora indicada.</p>
-        </div>
+<hr class="divider">
+
+<section id="canales">
+    <h2>Donde viven tus clientes, esta tu agente</h2>
+    <p>El agente opera en los canales que ya usa tu negocio. Vos lo administras por un canal seguro. Tus clientes le hablan por el suyo.</p>
+    <div class="channels">
+        <span class="channel">WhatsApp</span>
+        <span class="channel">Telegram</span>
+        <span class="channel">Signal</span>
+        <span class="channel soon">Email &mdash; pronto</span>
+        <span class="channel soon">Instagram DM &mdash; pronto</span>
+        <span class="channel soon">SMS &mdash; pronto</span>
     </div>
+    <p style="margin-top: 1.5rem; color: var(--text-secondary);">Un canal para que vos hables con el agente. Otro para que tus clientes hablen con el. Separados, seguros, sin mezclar.</p>
 </section>
 
 <hr class="divider">
 
 <section id="feedback">
-    <h2>Feedback como motor de aprendizaje</h2>
-    <p>El humano siempre tiene prioridad absoluta. Pero cada override es también feedback implícito:</p>
+    <h2>Cada corrección lo hace mejor</h2>
+    <p>Vos siempre tenés la última palabra. Pero cada vez que intervenís, el agente aprende:</p>
     <div class="feedback-list">
         <div class="feedback-item">
             <span class="arrow">&rarr;</span>
             <div>
-                <p><strong>Override puntual</strong> &mdash; Se registra en el grafo. Volátil, situacional.</p>
+                <p><strong>Lo corregís una vez</strong> &mdash; Lo recuerda para ese caso.</p>
             </div>
         </div>
         <div class="feedback-item">
             <span class="arrow">&rarr;</span>
             <div>
-                <p><strong>Patrón recurrente</strong> &mdash; Se captura como criterio en el skill. Permanente, general.</p>
+                <p><strong>Lo corregís dos veces</strong> &mdash; Lo incorpora como regla general.</p>
             </div>
         </div>
         <div class="feedback-item">
             <span class="arrow">&rarr;</span>
             <div>
-                <p><strong>Corrección de procedimiento</strong> &mdash; Se modifica el skill o se crea una regla nueva.</p>
+                <p><strong>Nunca lo corregís</strong> &mdash; Gana autonomía y deja de preguntar.</p>
             </div>
         </div>
     </div>
-    <p style="margin-top: 1.5rem; font-style: italic; color: var(--text-secondary);">Dos planos: el grafo para lo puntual, el skill para lo que se generaliza.</p>
+    <p style="margin-top: 1.5rem; font-style: italic; color: var(--text-secondary);">La meta no es reemplazarte. Es que no tengas que repetir lo que ya dijiste.</p>
+</section>
+
+<section id="contacto" style="text-align: center;">
+    <h2>Querés un agente para tu negocio?</h2>
+    <p style="max-width: 500px; margin: 0 auto 2rem;">Contanos qué hacés y armamos tu agente. Sin compromiso, sin letra chica.</p>
+    <a href="mailto:hola@loopbot.dev" class="hero cta" style="display: inline-block;">Hablemos</a>
 </section>
 
 <footer>
-    <p>loopbot &mdash; <a href="https://github.com/loopbot-workforce/loopbot" target="_blank">GitHub</a></p>
+    <p>loopbot &mdash; <a href="mailto:hola@loopbot.dev">hola@loopbot.dev</a> &mdash; <a href="https://github.com/loopbot-workforce/loopbot" target="_blank">GitHub</a></p>
 </footer>
 
 </body>
